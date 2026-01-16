@@ -9,7 +9,8 @@ extern SensorState sensor;
 extern unsigned long lastReceive;
 
 void handleTCP() {
-  if (!tcpClient || !tcpClient.connected()) {
+  if (!tcpClient || !tcpClient.connected()) 
+  {
     WiFiClient newClient = tcpServer.available();
     if (newClient) {
       tcpClient = newClient;
@@ -18,13 +19,15 @@ void handleTCP() {
     return;
   }
 
-  if (tcpClient.available()) {
+  if (tcpClient.available()) 
+  {
     String line = tcpClient.readStringUntil('\n');
     line.trim();
     if (line.length() == 0) return;
 
     StaticJsonDocument<256> doc;
-    if (deserializeJson(doc, line) == DeserializationError::Ok) {
+    if (deserializeJson(doc, line) == DeserializationError::Ok) 
+    {
       sensor.temp  = doc["temp"];
       sensor.humi  = doc["humi"];
       sensor.ldr   = doc["ldr"];

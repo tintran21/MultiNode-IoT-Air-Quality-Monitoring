@@ -12,7 +12,6 @@ extern const unsigned long RECEIVE_TIMEOUT;
 extern uint16_t MQ135_WARN;
 extern float TEMP_THRESHOLD;
 
-/* ================== API SENSOR ================== */
 void apiSensor() {
   StaticJsonDocument<300> doc;
   doc["temp"] = sensor.temp;
@@ -38,8 +37,8 @@ void apiSensor() {
   webServer.send(200, "application/json", out);
 }
 
-/* ================== API HISTORY ================== */
-void apiHistory() {
+void apiHistory() 
+{
   StaticJsonDocument<2048> doc;
   JsonArray t = doc.createNestedArray("temperature");
   JsonArray a = doc.createNestedArray("air_quality");
@@ -59,7 +58,6 @@ void apiHistory() {
   webServer.send(200, "application/json", out);
 }
 
-/* ================== WEB PAGE ================== */
 String get_html_page() 
 {
   return R"rawliteral(

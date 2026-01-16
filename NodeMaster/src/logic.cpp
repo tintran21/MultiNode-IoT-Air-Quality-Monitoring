@@ -12,14 +12,16 @@ extern const uint16_t LDR_THRESHOLD;
 extern const uint16_t MQ2_THRESHOLD;
 extern const uint16_t MQ135_DANGER;
 
-/* UART helpers */
-void sendUART(const String& cmd) {
+/* UART */
+void sendUART(const String& cmd) 
+{
   Serial2.println(cmd);
   Serial.print("[UART] ");
   Serial.println(cmd);
 }
 
-void updateUARTIfChanged() {
+void updateUARTIfChanged() 
+{
   if (actState.led_ldr != prevActState.led_ldr)
     sendUART("LED_LDR:" + String(actState.led_ldr ? "ON" : "OFF"));
 
@@ -35,10 +37,9 @@ void updateUARTIfChanged() {
   prevActState = actState;
 }
 
-/* =====================================================
- *                  LOGIC CORE
- * ===================================================== */
-void evaluateLogic() {
+/*logic*/
+void evaluateLogic() 
+{
   actState = {};
 
   if (sensor.temp > TEMP_THRESHOLD)

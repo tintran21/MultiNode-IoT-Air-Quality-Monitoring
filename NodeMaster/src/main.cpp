@@ -6,11 +6,9 @@
 #include "tcp.h"
 #include "web.h"
 
-/* =====================================================
- *                      CONFIG
- * ===================================================== */
-const char* AP_SSID = "ESP32_MASTER_AP";
-const char* AP_PASS = "12345678";
+/*Config*/
+const char* AP_SSID = "ESP32_MASTER_AP";  // you can change the SSID and PASS
+const char* AP_PASS = "12345678";         // but you have to change familiar to node sensors
 const uint16_t TCP_PORT = 8888;
 
 /* UART */
@@ -25,20 +23,14 @@ uint16_t MQ2_THRESHOLD    = 2500;
 uint16_t MQ135_WARN       = 800;
 uint16_t MQ135_DANGER     = 1050;
 
-/* =====================================================
- *                    OBJECTS
- * ===================================================== */
+
 WebServer webServer(80);
 WiFiServer tcpServer(TCP_PORT);
 WiFiClient tcpClient;
 
-/* =====================================================
- *                    STATES
- * ===================================================== */
 SensorState sensor;
 ActState actState, prevActState;
 
-/* history */
 float tempHistory[HISTORY_SIZE];
 int airHistory[HISTORY_SIZE];
 uint8_t histIndex = 0;
@@ -47,10 +39,8 @@ uint8_t histIndex = 0;
 unsigned long lastReceive = 0;
 unsigned long RECEIVE_TIMEOUT = 10000;
 
-/* =====================================================
- *                   SETUP
- * ===================================================== */
-void setup() {
+void setup() 
+{
   Serial.begin(115200);
   Serial2.begin(UART_BAUD, SERIAL_8N1, UART_RX_PIN, UART_TX_PIN);
 
@@ -69,10 +59,8 @@ void setup() {
   Serial.println("NodeMaster READY");
 }
 
-/* =====================================================
- *                    LOOP
- * ===================================================== */
-void loop() {
+void loop() 
+{
   handleTCP();
   webServer.handleClient();
 }
@@ -143,9 +131,6 @@ void loop() {
 // #include <WebServer.h>
 // #include <ArduinoJson.h>
 
-// /* =====================================================
-//  *                      CONFIG
-//  * ===================================================== */
 // const char* AP_SSID = "ESP32_MASTER_AP";
 // const char* AP_PASS = "12345678";
 
@@ -164,16 +149,10 @@ void loop() {
 // const uint16_t MQ135_WARN       = 800;
 // const uint16_t MQ135_DANGER     = 1050;
 
-// /* =====================================================
-//  *                    OBJECTS
-//  * ===================================================== */
 // WebServer webServer(80);
 // WiFiServer tcpServer(TCP_PORT);
 // WiFiClient tcpClient;
 
-// /* =====================================================
-//  *                    STATES
-//  * ===================================================== */
 // struct SensorState {
 //   float temp = 0;
 //   float humi = 0;
@@ -207,9 +186,7 @@ void loop() {
 // void apiSensor();
 // void apiHistory();
 // String get_html_page();
-// /* =====================================================
-//  *                   SETUP
-//  * ===================================================== */
+
 // void setup() {
 //   Serial.begin(115200);
 //   Serial2.begin(UART_BAUD, SERIAL_8N1, UART_RX_PIN, UART_TX_PIN);
@@ -230,19 +207,12 @@ void loop() {
 //   Serial.println("NodeMaster READY");
 // }
 
-// /* =====================================================
-//  *                    LOOP
-//  * ===================================================== */
 // void loop() {
 //   handleTCP();
 //   webServer.handleClient();
 // }
 
 
-
-// /* =====================================================
-//  *                 UART HELPERS
-//  * ===================================================== */
 // void sendUART(const String& cmd) {
 //   Serial2.println(cmd);
 //   Serial.print("[UART] ");
@@ -265,12 +235,6 @@ void loop() {
 //   prevActState = actState;
 // }
 
-// /* =====================================================
-//  *                  LOGIC CORE
-//  * ===================================================== */
-// /* =====================================================
-//  * LOGIC CORE
-//  * ===================================================== */
 // void evaluateLogic() {
 //   actState = {}; // reset
 
@@ -306,9 +270,6 @@ void loop() {
 //   histIndex = (histIndex + 1) % HISTORY_SIZE;
 // }
 
-// /* =====================================================
-//  *                TCP JSON RECEIVE
-//  * ===================================================== */
 // void handleTCP() {
 //   if (!tcpClient || !tcpClient.connected()) {
 //     WiFiClient newClient = tcpServer.available();
@@ -342,9 +303,6 @@ void loop() {
 //   }
 // }
 
-// /* =====================================================
-//  *                WEB API
-//  * ===================================================== */
 // void apiSensor() {
 //   StaticJsonDocument<300> doc;
 //   doc["temp"] = sensor.temp;
@@ -392,12 +350,6 @@ void loop() {
 //   webServer.send(200, "application/json", out);
 // }
 
-// /* =====================================================
-//  *                WEB PAGE (YOURS)
-//  * ===================================================== */
-// /* =====================================================
-//  * WEB PAGE (WITH CONTACT FOOTER)
-//  * ===================================================== */
 
 // String get_html_page() {
 //   return R"rawliteral(
