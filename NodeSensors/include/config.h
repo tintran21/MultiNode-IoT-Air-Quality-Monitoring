@@ -6,25 +6,21 @@
 #include <ArduinoJson.h>
 #include <DHT.h>
 
-/* ================= PIN CONFIG ================= */
 #define LDR_PIN         0
 #define MQ2_PIN         1
 #define MQ135_PIN       4
 #define DHT_PIN         5
 #define DHT_TYPE        DHT22
 
-/* ================= WIFI CONFIG ================= */
 extern const char* WIFI_SSID;
 extern const char* WIFI_PASS;
 
 extern const char* SERVER_IP;
 extern const uint16_t SERVER_PORT;
 
-/* ================= TIMING ================= */
 #define SENSOR_READ_INTERVAL    2000
 #define RECONNECT_INTERVAL      5000
 
-/* ================= STRUCT ================= */
 typedef struct {
     float temperature;
     float humidity;
@@ -33,7 +29,6 @@ typedef struct {
     uint16_t mq135;
 } sensor_data_t;
 
-/* ================= GLOBAL OBJECTS ================= */
 extern DHT dht;
 extern WiFiClient tcpClient;
 extern sensor_data_t sensorData;
