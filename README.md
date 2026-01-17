@@ -105,6 +105,7 @@ The system consists of **three independent nodes** communicating via **WiFi TCP*
   - The local web interface allows:
     - Real-time sensor value monitoring
     - Visualization of temperature and MQ-135 trend graphs
+    - <img width="377" height="787" alt="image" src="https://github.com/user-attachments/assets/5ae6552c-9793-43d7-86e7-98c286d24e6b" />
 
 ---
 
