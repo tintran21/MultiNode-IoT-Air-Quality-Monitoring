@@ -1,7 +1,7 @@
 # 🌫️ Multi-node Air Monitoring System
 
 ## Introduction
-This repository contains the source code for a **Multi-node Air Monitoring System**, designed with a **clear functional separation** between nodes:
+This repository contains the source code for a **Multi-node Air Monitoring System**, designed with a clear functional separation between nodes:
 
 - **Sensor Node** – environmental data acquisition  
 - **Master Node** – central processing and control  
@@ -29,7 +29,7 @@ The system consists of **three independent nodes** communicating via **WiFi TCP*
   - Controls LEDs and buzzer alarms
   - Drives a fan through a relay
 
-📷 **[SYSTEM OVERVIEW IMAGE]**
+📷 **SYSTEM OVERVIEW**
 
 <img width="1290" height="580" alt="image" src="https://github.com/user-attachments/assets/e509b2b9-e7e4-4f46-b32c-03623fe9767c" />
 
@@ -62,12 +62,12 @@ The system consists of **three independent nodes** communicating via **WiFi TCP*
 
 ## GPIO Configuration
 
-📷 **[SENSOR NODE GPIO IMAGE]**  
+📷 **SENSOR NODE GPIO**  
 
 <img width="608" height="395" alt="image" src="https://github.com/user-attachments/assets/401b7c3d-cb08-4540-a13e-a1e20bf2d191" />
 
 
-📷 **[MASTER & ACTUATOR NODE GPIO IMAGE]**
+📷 **MASTER & ACTUATOR NODE GPIO**
 
 <img width="1006" height="411" alt="image" src="https://github.com/user-attachments/assets/e64b37d3-c47b-471c-9831-50815e7d1d85" />
 
@@ -78,7 +78,7 @@ The system consists of **three independent nodes** communicating via **WiFi TCP*
 - **DHT22**
   - Measures temperature and humidity
   - Data is displayed on the LCD
-  - If **temperature > 30°C**, the cooling fan is activated
+  - If temperature > 30°C, the cooling fan is activated
 
 - **MQ-2 (Gas Detection)**
   - Detects flammable gases
@@ -109,7 +109,7 @@ The system consists of **three independent nodes** communicating via **WiFi TCP*
 ---
 
 ## Demo
-🔗 **Demo Link:** *[(to be added)](https://drive.google.com/file/d/10mCTWqZQtkh6QwptWKaQlUsgt7LEzdDk/view?usp=sharing)*
+🔗 **Demo Link:** *[(Click Here)](https://drive.google.com/file/d/10mCTWqZQtkh6QwptWKaQlUsgt7LEzdDk/view?usp=sharing)*
 
 ---
 
