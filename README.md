@@ -48,15 +48,15 @@ The system consists of **three independent nodes** communicating via **WiFi TCP*
 - **LDR** – ambient light intensity measurement  
 
 ### Actuators & Display
-- **20x4 I2C LCD**
-- **2 buzzers**
-- **3 LEDs with 220Ω resistors**
-- **1 DC fan**
-- **1 relay module (5V)**
+- 20x4 I2C LCD
+- 2 buzzers
+- 3 LEDs with 220Ω resistors
+- 1 DC fan
+- 1 relay module (5V)
 
 ### Power Supply
 - Battery or external adapter  
-- **5V and 3.3V step-down regulators** 
+- 5V and 3.3V step-down regulators 
 
 ---
 
