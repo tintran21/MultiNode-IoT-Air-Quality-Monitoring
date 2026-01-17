@@ -109,7 +109,7 @@ The system consists of **three independent nodes** communicating via **WiFi TCP*
 ---
 
 ## Demo
-🔗 **Demo Link:** *[(Click Here)](https://drive.google.com/file/d/10mCTWqZQtkh6QwptWKaQlUsgt7LEzdDk/view?usp=sharing)*
+🔗 **Demo Link:** *[Click Here](https://drive.google.com/file/d/10mCTWqZQtkh6QwptWKaQlUsgt7LEzdDk/view?usp=sharing)*
 
 ---
 
