@@ -45,7 +45,13 @@ The system consists of **three independent nodes** communicating via **WiFi TCP*
 - **DHT22** – temperature and humidity measurement  
 - **MQ-2** – gas detection (LPG, propane, methane, smoke)  
 - **MQ-135** – air quality monitoring (NH₃, CO₂, smoke, toxic gases)  
-- **LDR** – ambient light intensity measurement  
+- **LDR** – ambient light intensity measurement
+
+⚠️ **Note:** According to the MQ-2 and MQ-135 datasheets:
+- Initial preheating time: 24–48 hours (recommended)
+- Learning/experimental use: 1–2 hours
+- Normal operation warm-up time: 15–20 minutes
+
 
 ### Actuators & Display
 - 20x4 I2C LCD
