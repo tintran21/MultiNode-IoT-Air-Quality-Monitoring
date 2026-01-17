@@ -1,7 +1,7 @@
-# 🌫️ Multi-node Air Monitoring System
+# 🌫️ Multi-node Air Monitoring 
 
 ## Introduction
-This repository contains the source code for a **Multi-node Air Monitoring System**, designed with a clear functional separation between nodes:
+This repository contains the source code for **Multi-node Air Monitoring**, designed with a clear functional separation between nodes:
 
 - **Sensor Node** – environmental data acquisition  
 - **Master Node** – central processing and control  
