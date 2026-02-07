@@ -29,7 +29,7 @@ The system consists of **three independent nodes** communicating via **WiFi TCP*
   - Controls LEDs and buzzer alarms
   - Drives a fan through a relay
 
-📷 **SYSTEM OVERVIEW**
+**SYSTEM OVERVIEW**
 
 <img width="1290" height="580" alt="image" src="https://github.com/user-attachments/assets/e509b2b9-e7e4-4f46-b32c-03623fe9767c" />
 
