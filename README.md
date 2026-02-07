@@ -146,7 +146,7 @@ The system consists of **three independent nodes** communicating via **WiFi TCP*
 
 - Arduino Nano
 
-## 📬 Contact
+## Contact
 
 Email: trantin2114@gmail.com
 
